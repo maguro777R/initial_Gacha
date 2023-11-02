@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>サンプル3-4</title>
+		<style>
+			/*CSSのエリア*/
+		</style>
+	</head>
+	<body>
+		<!-- コンテンツのエリア -->
+		<h1>イニシャルガチャ</h1>
+		<p>イニシャルを表示します。</p>
+		<p>このイニシャルでキャラクターの名前を作ってみましょう！</p>
+		<!-- ガチャるボタンがほしい。あと、ガチャる演出もほしい……かも？　あと、GitHub に置いときたい。それと、表示をセンターにしたい。演出は利便性考えるといらないかな……？　でも、GitHubIO へターミナルからクローンする方法は知りたい -->
+		<p id="box1">イニシャル</p>
+		<script>
+			//JavaScriptのエリア
+			// 乱数関数
+			function getRandomInt(max) {
+				return Math.floor(Math.random() * max);
+			}
+
+			const box1 = document.getElementById("box1");
+			const box2 = document.getElementById("box2");
+			const array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+			const subscript1 = getRandomInt(25);
+			const subscript2 = getRandomInt(25);
+
+			const initial = array[subscript1] + '.' + array[subscript2] + '.';
+
+			box1.innerHTML = "<b>" + initial + "</b>";
+
+			function getRandomInt(max) {
+				return Math.floor(Math.random() * max);
+			}
+
+			console.log(getRandomInt(3));
+			// Expected output: 0, 1 or 2
+
+			console.log(getRandomInt(1));
+			// Expected output: 0
+
+			console.log(Math.random());
+			// Expected output: a number from 0 to <1
+		</script>
+	</body>
+</html>
